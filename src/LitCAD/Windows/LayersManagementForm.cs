@@ -81,21 +81,26 @@ namespace LitCAD.Windows
         private void InitializeLayerListView()
         {
             //
+            // Setting the view mode and full row selection for the ListView
             this.layerListView.View = View.Details;
             this.layerListView.FullRowSelect = true;
 
             //
+            // Creating and adding the "Name" column header
             ColumnHeader headerName = new ColumnHeader();
-            headerName.Text = "名称";
+            headerName.Text = "Name";
             headerName.TextAlign = HorizontalAlignment.Left;
             headerName.Width = 100;
             this.layerListView.Columns.Add(headerName);
 
+            //
+            // Creating and adding the "Color" column header
             ColumnHeader headerColor = new ColumnHeader();
-            headerColor.Text = "颜色";
+            headerColor.Text = "Color";
             headerColor.TextAlign = HorizontalAlignment.Left;
             headerColor.Width = 100;
             this.layerListView.Columns.Add(headerColor);
+
         }
 
         /// <summary>

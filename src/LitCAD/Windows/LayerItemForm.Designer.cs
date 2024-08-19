@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">True if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -51,7 +51,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "图层名称";
+            this.label1.Text = "Layer Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -59,9 +59,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 19);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 3;
-            this.label2.Text = "颜色";
+            this.label2.Text = "Color";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboColor
@@ -80,7 +80,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(104, 41);
             this.btnOK.TabIndex = 5;
-            this.btnOK.Text = "确认";
+            this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -91,7 +91,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 41);
             this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "取消";
+            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -111,7 +111,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LayerItemForm";
-            this.Text = "图层";
+            this.Text = "Layer";
             this.ResumeLayout(false);
             this.PerformLayout();
 

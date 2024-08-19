@@ -160,7 +160,7 @@ namespace LitCAD.Windows
         }
 
         /// <summary>
-        /// 新建工具条项
+        /// Create new toolbar item
         /// </summary>
         public ToolStripButton NewToolStripButton(
             string text,

@@ -88,40 +88,41 @@ namespace LitCAD.Windows
         private void SetupMainMenu_File(MenuStrip menuMain)
         {
             ToolStripMenuItem menuFile = new ToolStripMenuItem();
-            menuFile.Text = "文件";
+            menuFile.Text = "File";
             menuMain.Items.Add(menuFile);
 
-            // 新建
+            // New
             ToolStripMenuItem _new = _toolStripMgr.NewMenuItem(
                 "file_new",
-                "新建...",
+                "New...",
                 Resource1.file_new.ToBitmap(),
                 this.OnFileNew);
             menuFile.DropDownItems.Add(_new);
 
-            // 打开
+            // Open
             ToolStripMenuItem open = _toolStripMgr.NewMenuItem(
                 "file_open",
-                "打开...",
+                "Open...",
                 Resource1.file_open.ToBitmap(),
                 this.OnFileOpen);
             menuFile.DropDownItems.Add(open);
 
-            // 保存
+            // Save
             ToolStripMenuItem save = _toolStripMgr.NewMenuItem(
                 "file_save",
-                "保存",
+                "Save",
                 Resource1.file_save.ToBitmap(),
                 this.OnFileSave);
             menuFile.DropDownItems.Add(save);
 
-            // 另存为
+            // Save As
             ToolStripMenuItem saveas = _toolStripMgr.NewMenuItem(
                 "file_saveas",
-                "另存为...",
+                "Save As...",
                 Resource1.file_saveas.ToBitmap(),
                 this.OnFileSaveAs);
             menuFile.DropDownItems.Add(saveas);
+
         }
 
         /// <summary>
@@ -318,7 +319,7 @@ namespace LitCAD.Windows
         private void OnFileOpen(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "LitCAD文件(*.litcad)|*.litcad";
+            ofd.Filter = "LitCAD Document(*.litcad)|*.litcad";
             ofd.ValidateNames = true;
             ofd.CheckPathExists = true;
             ofd.CheckFileExists = true;
@@ -376,8 +377,8 @@ namespace LitCAD.Windows
             if (db.fileName == null)
             {
                 SaveFileDialog savedialog = new SaveFileDialog();
-                savedialog.Title = "保存";
-                savedialog.Filter = "LitCAD文件(*.litcad)|*.litcad";
+                savedialog.Title = "Keep";
+                savedialog.Filter = "LitCAD Document(*.litcad)|*.litcad";
                 savedialog.FilterIndex = 0;
                 savedialog.RestoreDirectory = true;
                 savedialog.CheckPathExists = true;
@@ -406,8 +407,8 @@ namespace LitCAD.Windows
             }
 
             SaveFileDialog savedialog = new SaveFileDialog();
-            savedialog.Title = "另存为";
-            savedialog.Filter = "LitCAD文件(*.litcad)|*.litcad";
+            savedialog.Title = "Save as";
+            savedialog.Filter = "LitCAD Document(*.litcad)|*.litcad";
             savedialog.FilterIndex = 0;
             savedialog.RestoreDirectory = true;
             savedialog.CheckPathExists = true;

@@ -170,40 +170,41 @@ namespace LitCAD.Windows
         private ToolStripMenuItem SetupMainMenu_Edit()
         {
             ToolStripMenuItem menuEdit = new ToolStripMenuItem();
-            menuEdit.Text = "编辑";
+            menuEdit.Text = "Edit";
 
-            // 撤销
+            // Undo
             ToolStripMenuItem undo = _toolStripMgr.NewMenuItem(
                 "edit_undo",
-                "撤销",
+                "Undo",
                 Resource1.edit_undo.ToBitmap(),
                 this.OnEditUndo);
             undo.ShortcutKeys = Keys.Control | Keys.Z;
             menuEdit.DropDownItems.Add(undo);
 
-            // 重做
+            // Redo
             ToolStripMenuItem redo = _toolStripMgr.NewMenuItem(
                 "edit_redo",
-                "重做",
+                "Redo",
                 Resource1.edit_redo.ToBitmap(),
                 this.OnEditRedo);
             redo.ShortcutKeys = Keys.Control | Keys.Y;
             menuEdit.DropDownItems.Add(redo);
 
             return menuEdit;
+
         }
 
         /// <summary>
-        /// 设置菜单: 格式
+        /// Setup Menu: Format
         /// </summary>
         private ToolStripMenuItem SetupMainMenu_Format()
         {
             ToolStripMenuItem menuFormat = new ToolStripMenuItem();
-            menuFormat.Text = "格式";
+            menuFormat.Text = "Format";
 
             ToolStripMenuItem menuLayer = _toolStripMgr.NewMenuItem(
                             "format_layer",
-                            "图层",
+                            "Layer",
                             Resource1.format_layer,
                             this.OnFormatLayer);
             menuFormat.DropDownItems.Add(menuLayer);
@@ -212,73 +213,73 @@ namespace LitCAD.Windows
         }
 
         /// <summary>
-        /// 设置菜单: 绘图
+        /// Setup Menu: Draw
         /// </summary>
         private ToolStripMenuItem SetupMainMenu_Draw()
         {
             ToolStripMenuItem menuDraw = new ToolStripMenuItem();
-            menuDraw.Text = "绘图";
+            menuDraw.Text = "Draw";
 
-            // 直线
+            // Line
             ToolStripMenuItem lines = _toolStripMgr.NewMenuItem(
                 "draw_lines",
-                "直线",
+                "Line",
                 Resource1.draw_line.ToBitmap(),
                 this.OnDrawLines);
             menuDraw.DropDownItems.Add(lines);
 
-            // 射线
+            // Ray
             ToolStripMenuItem ray = _toolStripMgr.NewMenuItem(
                 "draw_ray",
-                "射线",
+                "Ray",
                 Resource1.draw_ray.ToBitmap(),
                 this.OnDrawRay);
             menuDraw.DropDownItems.Add(ray);
 
-            // 构造线
+            // Construction Line
             ToolStripMenuItem xline = _toolStripMgr.NewMenuItem(
                 "draw_xline",
-                "构造线",
+                "Construction Line",
                 Resource1.draw_xline.ToBitmap(),
                 this.OnDrawXLine);
             menuDraw.DropDownItems.Add(xline);
 
-            // 多段线
+            // Polyline
             ToolStripMenuItem polyline = _toolStripMgr.NewMenuItem(
                 "draw_polyline",
-                "多段线",
+                "Polyline",
                 Resource1.draw_polyline.ToBitmap(),
                 this.OnDrawPolyline);
             menuDraw.DropDownItems.Add(polyline);
 
-            // 正多边形
+            // Polygon
             ToolStripMenuItem polygon = _toolStripMgr.NewMenuItem(
                 "draw_polygon",
-                "正多边形",
+                "Polygon",
                 Resource1.draw_polygon.ToBitmap(),
                 this.OnDrawPolygon);
             menuDraw.DropDownItems.Add(polygon);
 
-            // 矩形
+            // Rectangle
             ToolStripMenuItem rectangle = _toolStripMgr.NewMenuItem(
                 "draw_rectangle",
-                "矩形",
+                "Rectangle",
                 Resource1.draw_rectangle.ToBitmap(),
                 this.OnDrawRectangle);
             menuDraw.DropDownItems.Add(rectangle);
 
-            // 圆
+            // Circle
             ToolStripMenuItem circle = _toolStripMgr.NewMenuItem(
                 "draw_circle",
-                "圆",
+                "Circle",
                 Resource1.draw_circle_cr.ToBitmap(),
                 this.OnDrawCircle);
             menuDraw.DropDownItems.Add(circle);
 
-            // 圆弧
+            // Arc
             ToolStripMenuItem arc = _toolStripMgr.NewMenuItem(
                 "draw_arc",
-                "圆弧",
+                "Arc",
                 Resource1.draw_arc_cse.ToBitmap(),
                 this.OnDrawArc);
             menuDraw.DropDownItems.Add(arc);
@@ -287,49 +288,49 @@ namespace LitCAD.Windows
         }
 
         /// <summary>
-        /// 设置菜单: 修改
+        /// Setup Menu: Modify
         /// </summary>
         private ToolStripMenuItem SetupMainMenu_Modify()
         {
             ToolStripMenuItem menuModify = new ToolStripMenuItem();
-            menuModify.Text = "修改";
+            menuModify.Text = "Modify";
 
-            // 删除
+            // Erase
             ToolStripMenuItem erase = _toolStripMgr.NewMenuItem(
                 "modify_erase",
-                "删除",
+                "Erase",
                 Resource1.modify_erase.ToBitmap(),
                 this.OnModifyErase);
             menuModify.DropDownItems.Add(erase);
 
-            // 复制
+            // Copy
             ToolStripMenuItem copy = _toolStripMgr.NewMenuItem(
                 "modify_copy",
-                "复制",
+                "Copy",
                 Resource1.modify_copy.ToBitmap(),
                 this.OnModifyCopy);
             menuModify.DropDownItems.Add(copy);
 
-            // 镜像
+            // Mirror
             ToolStripMenuItem mirror = _toolStripMgr.NewMenuItem(
                 "modify_mirror",
-                "镜像",
+                "Mirror",
                 Resource1.modify_mirror.ToBitmap(),
                 this.OnModifyMirror);
             menuModify.DropDownItems.Add(mirror);
 
-            // 偏移
+            // Offset
             ToolStripMenuItem offset = _toolStripMgr.NewMenuItem(
                 "modify_offset",
-                "偏移",
+                "Offset",
                 Resource1.modify_offset.ToBitmap(),
                 this.OnModifyOffset);
             menuModify.DropDownItems.Add(offset);
 
-            // 移动
+            // Move
             ToolStripMenuItem move = _toolStripMgr.NewMenuItem(
                 "modify_move",
-                "移动",
+                "Move",
                 Resource1.modify_move.ToBitmap(),
                 this.OnModifyMove);
             menuModify.DropDownItems.Add(move);
@@ -565,7 +566,7 @@ namespace LitCAD.Windows
             }
 
             _colorComboCustomColorIndex = _toolstripColorCombo.Items.Count;
-            ToolStripButton selectColorBtn = new ToolStripButton("选择颜色...");
+            ToolStripButton selectColorBtn = new ToolStripButton("Choose color...");
             selectColorBtn.Tag = null;
             _toolstripColorCombo.Items.Add(selectColorBtn);
 

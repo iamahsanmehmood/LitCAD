@@ -27,19 +27,20 @@ namespace LitCAD.ApplicationServices
             _predefinedColors.Add(Color.ByBlock, Color.ByBlock.Name);
 
             // Red
-            _predefinedColors.Add(Color.FromRGB(255, 0, 0), "红");
+            _predefinedColors.Add(Color.FromRGB(255, 0, 0), "Red");
             // Yellow
-            _predefinedColors.Add(Color.FromRGB(255, 255, 0), "黄");
+            _predefinedColors.Add(Color.FromRGB(255, 255, 0), "Yellow");
             // Green
-            _predefinedColors.Add(Color.FromRGB(0, 255, 0), "绿");
+            _predefinedColors.Add(Color.FromRGB(0, 255, 0), "Green");
             // Cyan
-            _predefinedColors.Add(Color.FromRGB(0, 255, 255), "青");
+            _predefinedColors.Add(Color.FromRGB(0, 255, 255), "Cyan");
             // Blue
-            _predefinedColors.Add(Color.FromRGB(0, 0, 255), "蓝");
+            _predefinedColors.Add(Color.FromRGB(0, 0, 255), "Blue");
             // Magenta
-            _predefinedColors.Add(Color.FromRGB(255, 0, 255), "洋红");
+            _predefinedColors.Add(Color.FromRGB(255, 0, 255), "Magenta");
             // White
-            _predefinedColors.Add(Color.FromRGB(255, 255, 255), "白");
+            _predefinedColors.Add(Color.FromRGB(255, 255, 255), "White");
+
         }
 
         public string GetColorName(Color color)

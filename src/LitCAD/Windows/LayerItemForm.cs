@@ -61,13 +61,13 @@ namespace LitCAD.Windows
         private Dictionary<lcColor, string> _predefinedColors = new Dictionary<lcColor, string>();
         private void InitializePredefinedColors()
         {
-            _predefinedColors.Add(lcColor.FromRGB(255, 0, 0), "红");
-            _predefinedColors.Add(lcColor.FromRGB(255, 255, 0), "黄");
-            _predefinedColors.Add(lcColor.FromRGB(0, 255, 0), "绿");
-            _predefinedColors.Add(lcColor.FromRGB(0, 255, 255), "青");
-            _predefinedColors.Add(lcColor.FromRGB(0, 0, 255), "蓝");
-            _predefinedColors.Add(lcColor.FromRGB(255, 0, 255), "洋红");
-            _predefinedColors.Add(lcColor.FromRGB(255, 255, 255), "白");
+            _predefinedColors.Add(lcColor.FromRGB(255, 0, 0), "Red");
+            _predefinedColors.Add(lcColor.FromRGB(255, 255, 0), "Yellow");
+            _predefinedColors.Add(lcColor.FromRGB(0, 255, 0), "Green");
+            _predefinedColors.Add(lcColor.FromRGB(0, 255, 255), "Cyan");
+            _predefinedColors.Add(lcColor.FromRGB(0, 0, 255), "Blue");
+            _predefinedColors.Add(lcColor.FromRGB(255, 0, 255), "Magenta");
+            _predefinedColors.Add(lcColor.FromRGB(255, 255, 255), "White");
 
             if (_layer != null)
             {
@@ -173,7 +173,7 @@ namespace LitCAD.Windows
             {
                 if (text == null)
                 {
-                    return "选择颜色";
+                    return "Choose color";
                 }
                 else if (text == "")
                 {
@@ -229,7 +229,7 @@ namespace LitCAD.Windows
         {
             if (this.layerName == "")
             {
-                MessageBox.Show("图层名不能为空");
+                MessageBox.Show("Layer name cannot be empty");
                 return;
             }
 
@@ -239,7 +239,7 @@ namespace LitCAD.Windows
                 {
                     if (layer.name == this.layerName)
                     {
-                        string msg = string.Format("图层名: {0} 已经存在", this.layerName);
+                        string msg = string.Format("Layer name: {0} already exists", this.layerName);
                         MessageBox.Show(msg);
                         return;
                     }
@@ -248,6 +248,7 @@ namespace LitCAD.Windows
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+
         }
 
         /// <summary>
